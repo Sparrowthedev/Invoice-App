@@ -1,11 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { useNavigate } from 'react-router-dom'
-
 
 
 export const logoutVendor = () => {
-    const navigate = useNavigate()
-    navigate('/login')
+    location.href = '/login';
     localStorage.clear()
 }
 
