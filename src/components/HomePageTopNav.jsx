@@ -26,16 +26,6 @@ const HomePageTopNav = ({ billData }) => {
         dispatch(logoutVendor())
     }
 
-    // function checkProfileUpdate() {
-    //     if (loggedInVendor.businessWesite === "") {
-    //         console.log("In complete")
-    //         console.log(loggedInVendor.businessWesite)
-    //         setCheckUpdatedAccount(false)
-    //     } else {
-    //         console.log("Complete")
-    //         setCheckUpdatedAccount(true)
-    //     }
-    // }
 
 
     return (

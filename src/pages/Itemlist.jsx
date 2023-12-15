@@ -30,7 +30,7 @@ const Itemlist = () => {
     }, [])
 
     async function getInvoice() {
-        const res = await fetch(`http://localhost:5000/api/v1/invoice/singleInvoice/${invoiceId}`, {
+        const res = await fetch(`https://invoice-server-xmux.onrender.com/api/v1/invoice/singleInvoice/${invoiceId}`, {
             headers: {
                 'Content-type': "application/json",
                 Authorization: `Bearer ${token}`

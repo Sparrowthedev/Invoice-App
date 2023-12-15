@@ -39,7 +39,7 @@ const ItemListContainer = ({ previousItemList, clientBillInfo }) => {
 
     async function updateClintBillInfo() {
         setLoading(true)
-        const res = await fetch(`http://localhost:5000/api/v1/invoice/updateInvoice/${invoiceId}`, {
+        const res = await fetch(`https://invoice-server-xmux.onrender.com/api/v1/invoice/updateInvoice/${invoiceId}`, {
             method: "PUT",
             headers: {
                 'Content-type': "application/json",

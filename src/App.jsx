@@ -22,7 +22,7 @@ function App() {
   const logedInVendor = localStorage.getItem('vendorInfo')
   const [darkToggle, setDarkToggle] = useState(false)
   const [navValue, setNavValue] = useState(-200)
-  const [baseUrl, setBaseUrl] = useState("http://localhost:5000/api/v1")
+  const [baseUrl, setBaseUrl] = useState("https://invoice-server-xmux.onrender.com/api/v1")
 
   function toggleBackground() {
     console.log(darkToggle)

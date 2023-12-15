@@ -5,7 +5,7 @@ export const getAllClientInfo = createAsyncThunk(
   "getAllClientThunk",
   async (payload, thunkAPI) => {
     const response = await fetch(
-      "http://localhost:5000/api/v1/client/allClients",
+      "https://invoice-server-xmux.onrender.com/api/v1/client/allClients",
       {
         method: "GET",
         headers: {
@@ -32,7 +32,7 @@ export const addNewClient = createAsyncThunk(
   async (clientData, thunkAPI) => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/v1/client/registerClient",
+        "https://invoice-server-xmux.onrender.com/api/v1/client/registerClient",
         {
           method: "POST",
           headers: {
