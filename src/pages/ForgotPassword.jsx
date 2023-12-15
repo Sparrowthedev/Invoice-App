@@ -57,7 +57,7 @@ const ForgotPassword = ({ baseUrl }) => {
                     {error && <p className="text-white text-center bg-red-600 py-1 px-2 mb-3">{error}</p>}
                     {success && <p className="text-white text-center bg-green-600 py-[10px] px-2 mb-3">{success}</p>}
                     <h1>Vendor Reset Password Request</h1>
-                    <input onChange={(e) => setEmail(e.target.value)} value={email} type="text" placeholder='frank@gmail.com' className="focus:outline-none border-gray-300 rounded-[4px] border-[1px] pl-3 py-2 w-full mt-2 bg-[#141625]" />
+                    <input onChange={(e) => setEmail(e.target.value)} value={email} type="text" placeholder='sparrow@gmail.com' className="focus:outline-none border-gray-300 rounded-[4px] border-[1px] pl-3 py-2 w-full mt-2 bg-[#141625]" />
                 </div>
                 {!loading ?
                     <button className='mt-3 w-full bg-green-500 border-[1px] py-1 px-3 rounded-md cursor-pointer'>Reset Password Link</button>
