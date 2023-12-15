@@ -1,0 +1,421 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+* {
+    font-family: 'Montserrat';
+}
+
+.multiStepFormContainer div:nth-of-type(2) div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.multiStepFormContainer div:nth-of-type(2) div button {
+    background-color: #7B5EF8;
+    padding: 7px 1rem;
+    border-radius: 5px;
+}
+
+.multiStepFormContainer button:disabled {
+    background-color: gray !important;
+    cursor: not-allowed;
+}
+
+.multiStepFormContainer input {
+    color: #000;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+@keyframes loader {
+    0% {
+        left: 0%;
+        right: 100%;
+        width: 0%;
+    }
+
+    10% {
+        left: 0%;
+        right: 75%;
+        width: 25%;
+    }
+
+    90% {
+        right: 0%;
+        left: 75%;
+        width: 25%;
+    }
+
+    100% {
+        left: 100%;
+        right: 0%;
+        width: 0%;
+    }
+}
+
+.loader-parent::before {
+    content: '';
+    /* border:1px solid #630470;  */
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-parent .loading-bar {
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    right: 100%;
+    bottom: 0px;
+    left: 0;
+    background: #630470;
+    width: 0;
+    height: 4px;
+    animation: loader 2s linear infinite;
+}
+
+.loadingBg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100vw;
+    height: 150vh;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader-parent {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 4px solid transparent;
+    position: relative;
+    padding: 1px;
+}
+
+.loader-container img {
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+
+.styled-table {
+    overflow-x: auto;
+    border-collapse: collapse;
+    /* margin: 25px 0; */
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.styled-table thead tr {
+    color: #797979;
+    text-align: left;
+}
+
+.styled-table th {
+    padding: 18px;
+}
+
+.styled-table th:first-child {
+    border-top-left-radius: 10%;
+}
+
+.styled-table th:last-child {
+    border-top-right-radius: 10%;
+}
+
+.styled-table td {
+    padding: 15px;
+}
+
+.styled-table tbody tr.active-row {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 40px;
+}
+
+
+.styled-table tbody tr {
+    border-top: 1px solid #575757;
+}
+
+.sideNav a:hover {
+    background-color: #141625;
+    transition: .5s;
+}
+
+.searchAndText {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    place-items: center;
+}
+
+svg {
+    filter: invert(1);
+    width: 25px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+.clientInfo {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.clientInfo p,
+.clientInfo a,
+.clientInfo i {
+    color: #1F213A;
+    font-size: 18px;
+}
+
+.clientInfo i {
+    font-size: 28px;
+}
+
+.transitionClass {
+    transition: all 2.5s !important;
+    /* bottom: -200px !important; */
+}
+
+@media screen and (max-width: 768px) {
+    .searchAndText {
+        grid-template-columns: 1fr;
+    }
+
+    .clientInfo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .clientInfo p,
+    .clientInfo a,
+    .clientInfo i {
+        font-size: 16px;
+    }
+
+    .clientInfo i {
+        font-size: 18px;
+    }
+}
+
+.settingsTopNav div:nth-of-type(1) {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width:568px) {
+    .settingsTopNav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+    }
+
+    .settingsTopNav div:nth-of-type(1) {
+        margin-bottom: 0;
+    }
+}
+
+.bottomNav {
+    bottom: -200px;
+    transition: .5s;
+}
+
+@media screen and (max-width:1024px) {
+    .showNav {
+        bottom: 0;
+        transition: .5s;
+        box-shadow: 0px 0px 50px #19191f;
+    }
+}
+
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -468px 0
+    }
+
+    100% {
+        background-position: 468px 0
+    }
+}
+
+.animated-background {
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #1F213A;
+    background: linear-gradient(to right, #1F213A 10%, #17193b 18%, #1F213A 33%);
+    background-size: 800px 104px;
+    height: 70px;
+    position: relative;
+}
+
+.settings-animated-background {
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #141625;
+    background: linear-gradient(to right, #141625 10%, #1F213A 18%, #141625 33%);
+    background-size: 800px 104px;
+    position: relative;
+}
+
+.buttonload {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+}
+
+
+/* ANIMATED CHECKMARK STARTS */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkmark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #000000;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px #9a4cff;
+    animation: successFill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1)
+    }
+}
+
+@keyframes successFill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #9a4cff;
+    }
+}
+
+/* ANIMATED CHECKMARK ENDS */
+
+
+
+
+
+/* ANIMATED CANCELMARK STARTS */
+.cancel {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #000000;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #48ece2;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+
+.check__cancel {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #48ece2;
+    }
+}
+
+/* b71d9f green */
+
+/* ANIMATED CANCELMARK STARTS */
