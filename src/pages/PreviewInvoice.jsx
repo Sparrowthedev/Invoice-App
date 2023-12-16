@@ -219,7 +219,7 @@ const PreviewInvoice = ({ baseUrl }) => {
           </div>
         )}
 
-        <div className="text-gray-500 flex items-start flex-col w-full justify-between gap-[2rem] bg-[#202B3F] mt-10 py-4 px-4 rounded-md">
+        <div className="text-gray-500 flex items-start flex-col w-full justify-between gap-[2rem] bg-[#202B3F] mt-10 py-4 px-4 rounded-md overflow-x-scroll">
           <table className="styled-table">
             <thead>
               <tr>

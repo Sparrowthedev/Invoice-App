@@ -12,16 +12,16 @@ const PasswordReset = ({ baseUrl }) => {
     const [inputType, setInputType] = useState('password');
     const [showPassword, setShowPassword] = useState(false)
 
-    useEffect(() => {
-        console.log(vendor_id, token)
-        getRoute()
-    }, [])
+    // useEffect(() => {
+    //     console.log(vendor_id, token)
+    //     getRoute()
+    // }, [])
 
-    async function getRoute() {
-        const response = await fetch(`${baseUrl}/auth/resetpassword/${token}/${vendor_id}`)
-        const data = await response.json()
-        console.log(data)
-    }
+    // async function getRoute() {
+    //     const response = await fetch(`${baseUrl}/auth/resetpassword/${token}/${vendor_id}`)
+    //     const data = await response.json()
+    //     console.log(data)
+    // }
 
     async function updatePassword(e) {
         e.preventDefault()
@@ -72,6 +72,7 @@ const PasswordReset = ({ baseUrl }) => {
         setInputType(inputType === 'password' ? 'text' : 'password')
         setShowPassword(!showPassword)
     }
+    
 
 
     return (
